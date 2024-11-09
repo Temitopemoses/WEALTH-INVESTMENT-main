@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>wealthwiseinvestment</title>
+    <link rel="icon" href="img\20240903_184039.png" type="image/jpg">
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Verdana, sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        .navbar {
+            background-color: #eceef0;
+            font-family: Verdana, sans-serif;
+        }
+
+        .navbar-brand img {
+            width: 170px; /* Adjusted logo size */
+            height: 100px;
+        }
+
+        .navbar-nav .nav-link {
+            color: #181717;
+            font-size: 12px; /* Further reduced font size */
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ffd700;
+        }
+
+        .navbar-toggler {
+            border-color: #ffffff; /* Optional: change the border color to match */
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+
+        .dropdown-menu {
+            background-color: #eceef0;
+            font-family: Verdana, sans-serif;
+        }
+
+        .dropdown-item {
+            color: #000000;
+            font-size: 12px; /* Reduced font size */
+        }
+
+        .dropdown-item:hover {
+            background-color: #eceef0;
+            color: #ffd700;
+        }
+
+        .header-image {
+            width: 100%;
+            height: 150px; /* Adjusted height */
+            object-fit: cover; /* Ensures the image covers the area without distortion */
+            margin-bottom: 1.5rem;
+        }
+        .dashboard-card {
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card {
+            border: 1px solid #eceef0; /* Adjusted border thickness */
+            border-radius: 0.5rem;
+            box-shadow: rgb(199, 197, 216) 4px 8px 9px -2px;
+            display: flex;
+        }
+
+        .btn-long {
+            width: 100%; /* Makes the button take the full width */
+        }
+
+        .form-control, .form-select {
+            font-size: 0.875rem; /* Smaller font size */
+        }
+        /* TradingView Widget Styling */
+        .tradingview-widget-container {
+    width: 100vw; /* Full viewport width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+    padding: 0; /* Remove padding */
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensure nothing overflows */
+}
+
+.tradingview-widget-container iframe {
+    width: 100%; /* Ensure the iframe takes full width */
+    height: 74px;
+    border: none; /* Remove any borders */
+}
+/* Styling for the popup notification */
+.popup {
+    background-color: #9eeaf9  /* White background */
+    color: #055160;             /* Black text */
+    font-size: 14px;          /* Smaller font size */
+    padding: 10px 20px;       /* Padding inside the popup */
+    border-radius: 5px;       /* Rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+    max-width: 400px;         /* Optional: set a max width for the popup */
+    width: 100%;              /* Make it responsive */
+    position: fixed;          /* Position fixed at the bottom */
+    bottom: 20px;             /* Distance from the bottom */
+    left: 20px;               /* Distance from the left side */
+    display: none;            /* Initially hidden */
+    z-index: 1050;            /* Ensure it's above other elements */
+}
+
+/* The 'show' class will make the popup visible */
+.popup.show {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* The 'hidden' class will keep the popup hidden */
+.popup.hidden {
+    display: none;
+    opacity: 0;
+}
+
+
+
+@media (max-width: 768px) {
+    .tradingview-widget-container {
+        padding: 0; /* Ensure no padding on smaller screens */
+        margin-top: 1rem;
+    }
+}
+
+        .footer {
+            background-color: #eceef0;
+            padding: 1rem;
+            margin-top: 2rem;
+            text-align: center;
+        }
+        
+        .footer span {
+            color: #6c757d;
+            font-size: 0.875rem;
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Top Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <!-- Logo Section -->
+        <a class="navbar-brand" href="#">
+            <img src="img/20240903_184039.png" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="deposit.html"><i class="fas fa-upload"></i> Deposit</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="withdraw.html"><i class="fas fa-download"></i> Withdraw</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="transfer.html"><i class="fas fa-exchange-alt"></i> Transfer</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="transactionDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-file-alt"></i> Transactions
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="transactionDropdown">
+                        <li><a class="dropdown-item" href="transaction.html">All Transactions</a></li>
+                        <li><a class="dropdown-item" href="transaction.html">Deposits</a></li>
+                        <li><a class="dropdown-item" href="transaction.html">Withdrawals</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-user"></i> Account
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="accountDropdown">
+                        <li><a class="dropdown-item" href="profile.html">My Profile</a></li>
+                        <li><a class="dropdown-item" href="refferal.html">My Referral</a></li>
+                        <li><a class="dropdown-item" href="Signup.html">Sign Out</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Full-Width Image -->
+<img src="img\Stock market or forex trading graph in futuristic concept.jpeg" alt="Dashboard Header" class="header-image">
+
+<!-- Dashboard Content -->
+<div class="container-dashboard">
+    <div class="row">
+        <!-- Example Card 1 -->
+        <div class="col-lg-4 col-md-6">
+            <div class="dashboard-card">
+                <h5>Total Balance</h5>
+                <p>$12,345.67</p>
+            </div>
+        </div>
+        <!-- Example Card 2 -->
+        <div class="col-lg-4 col-md-6">
+            <div class="dashboard-card">
+                <h5>Recent Deposits</h5>
+                <p>$5,000.00</p>
+            </div>
+        </div>
+        <!-- Example Card 3 -->
+        <div class="col-lg-4 col-md-6">
+            <div class="dashboard-card">
+                <h5>Recent Withdrawals</h5>
+                <p>$1,200.00</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Popup Notification -->
+    <div id="popup-notification" class="popup alert alert-info fixed-bottom mb-3 mx-3 hidden" role="alert">
+        <p id="popup-message"></p>
+      </div>
+<!-- TradingView Widget -->
+<div class="tradingview-widget-container" style="width: 100%; height: 74px;">
+
+    <iframe scrolling="no" allowtransparency="true" frameborder="0" src="https://www.tradingview-widget.com/embed-widget/ticker-tape/?locale=en#%7B%22symbols%22%3A%5B%7B%22proName%22%3A%22BITSTAMP%3ABTCUSD%22%2C%22title%22%3A%22BTC%2FUSD%22%7D%2C%7B%22proName%22%3A%22BITSTAMP%3AETHUSD%22%2C%22title%22%3A%22ETH%2FUSD%22%7D%2C%7B%22description%22%3A%22USDT%2FUSD%22%2C%22proName%22%3A%22KRAKEN%3AUSDTUSD%22%7D%2C%7B%22description%22%3A%22XRP%2FUSD%22%2C%22proName%22%3A%22KRAKEN%3AXRPUSD%22%7D%2C%7B%22description%22%3A%22BCH%2FUSD%22%2C%22proName%22%3A%22KRAKEN%3ABCHUSD%22%7D%2C%7B%22description%22%3A%22BNB%2FUSD%22%2C%22proName%22%3A%22BINANCE%3ABNBUSD%22%7D%2C%7B%22description%22%3A%22DOT%2FUSD%22%2C%22proName%22%3A%22KRAKEN%3ADOTUSD%22%7D%2C%7B%22description%22%3A%22LINK%2FUSD%22%2C%22proName%22%3A%22KRAKEN%3ALINKUSD%22%7D%2C%7B%22description%22%3A%22BSV%2FUSD%22%2C%22proName%22%3A%22BITBAY%3ABSVUSD%22%7D%2C%7B%22description%22%3A%22CRO%2FUSD%22%2C%22proName%22%3A%22BITTREX%3ACROUSD%22%7D%2C%7B%22description%22%3A%22ADAUSD%22%2C%22proName%22%3A%22KRAKEN%3AADAUSD%22%7D%2C%7B%22description%22%3A%22LTC%2FUSD%22%2C%22proName%22%3A%22KRAKEN%3ALTCUSD%22%7D%2C%7B%22description%22%3A%22USDC%2FUSD%22%2C%22proName%22%3A%22KRAKEN%3AUSDCUSD%22%7D%2C%7B%22description%22%3A%22TRX%2FUSD%22%2C%22proName%22%3A%22KRAKEN%3ATRXUSD%22%7D%2C%7B%22description%22%3A%22XMR%2FUSD%22%2C%22proName%22%3A%22KRAKEN%3AXMRUSD%22%7D%5D%2C%22colorTheme%22%3A%22light%22%2C%22isTransparent%22%3Afalse%2C%22displayMode%22%3A%22compact%22%2C%22width%22%3A%22100%25%22%2C%22height%22%3A74%2C%22utm_source%22%3A%22mybridgetrustinvests.com%22%2C%22utm_medium%22%3A%22widget%22%2C%22utm_campaign%22%3A%22ticker-tape%22%2C%22page-uri%22%3A%22mybridgetrustinvests.com%2F%22%7D" title="ticker tape TradingView widget" lang="en" style="user-select: none; box-sizing: border-box; display: block; height: 74px; width: 100%;"></iframe>
+
+    
+
+  <style>
+.tradingview-widget-copyright {
+font-size: 13px !important;
+line-height: 32px !important;
+text-align: center !important;
+vertical-align: middle !important;
+/* @mixin sf-pro-display-font; */
+font-family: -apple-system, BlinkMacSystemFont, 'Trebuchet MS', Roboto, Ubuntu, sans-serif !important;
+color: #B2B5BE !important;
+}
+
+.tradingview-widget-copyright .blue-text {
+color: #2962FF !important;
+}
+
+.tradingview-widget-copyright a {
+text-decoration: none !important;
+color: #B2B5BE !important;
+}
+
+.tradingview-widget-copyright a:visited {
+color: #B2B5BE !important;
+}
+
+.tradingview-widget-copyright a:hover .blue-text {
+color: #1E53E5 !important;
+}
+
+.tradingview-widget-copyright a:active .blue-text {
+color: #1848CC !important;
+}
+
+.tradingview-widget-copyright a:visited .blue-text {
+color: #2962FF !important;
+}
+</style></div>
+</div>
+<!-- TradingView Widget END -->
+<!-- Footer -->
+<footer class="footer">
+    <span>© 2024 WealthWise Investment. All rights reserved.</span>
+</footer>
+<!-- Bootstrap JS and dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+<script>
+  // Array of possible messages to display in the popup
+const messages = [
+    "Daniel has just withdrawn $300",
+    "Moses has just invested $500",
+    "Sarah has just withdrawn $150",
+    "Lola has just invested $200",
+    "Michael has just earned $100 from his investment",
+    "A client has just withdrawn $450",
+    "Mary has just invested $700",
+    "Keane has just invested $700",
+    "Michael has just earned $100 from his investment"
+];
+
+// Function to show the popup with a given message
+function showPopup(message) {
+    const popup = document.getElementById('popup-notification');
+    const popupMessage = document.getElementById('popup-message');
+
+    // Set the message content
+    popupMessage.textContent = message;
+
+    // Show the popup by adding 'show' class and removing 'hidden' class
+    popup.classList.remove('hidden');
+    popup.classList.add('show');
+
+    // Hide the popup after 5 seconds
+    setTimeout(() => {
+        popup.classList.remove('show');
+        popup.classList.add('hidden');
+    }, 5000); // 5 seconds
+}
+
+// Function to trigger a random popup message
+function triggerRandomPopup() {
+    const randomIndex = Math.floor(Math.random() * messages.length);  // Get a random index
+    const randomMessage = messages[randomIndex];  // Get the random message
+    showPopup(randomMessage);  // Show the popup with the selected message
+}
+
+// Trigger a random popup every 7 seconds
+setInterval(triggerRandomPopup, 7000);
+
+  
+  </script>
+</body>
+</html>

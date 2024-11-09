@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wealth Wise Investments</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles1.css">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="icon" href="logo.png" type="image/png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="scripts.js" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" class="logori" alt="Logo">
+            </a>
+
+            <!-- Navbar toggler (hamburger icon) for mobile view -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+             <div class="navbar-nav">    
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link" href="about.html">About</a>
+                        <a class="nav-link" href="investment.html">Investment</a>
+                        <a class="nav-link" href="support.html">Support</a>
+                        <a class="nav-link" href="policy.html">Policy</a>
+                   <!-- Custom styled Login and Sign Up buttons -->
+                <div class="d-flex ">
+                    <a href="login.html" class="btn btn-outline-gold me-2">Login</a>
+                    <a href="signup.html" class="btn btn-outline-custom">Sign Up</a>
+                </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+  <div class="hero-section">
+    <h1>Your Trusted Partner in Investments</h1>
+    <p style="color: #ffffff;">We help you grow and secure your wealth with strategic and reliable investment plans.</p>
+    <a href="Signup.html" class="cta-btn">Get Started</a>
+  </div>
+  
+  <section class="features">
+    <div class="feature">
+      <img src="secure.jpg" alt="Secure Investment">
+      <h2>Secure Investments</h2>
+      <p>Our plans are designed to provide maximum security for your investments.</p>
+    </div>
+    <div class="feature">
+      <img src="highreturn.jpg" alt="High Returns">
+      <h2>High Returns</h2>
+      <p>We ensure your wealth grows with competitive rates and expert strategies.</p>
+    </div>
+    <div class="feature">
+      <img src="expert.avif" alt="Expert Advisors">
+      <h2>Expert Advisors</h2>
+      <p>Work with professionals who understand market trends and risks.</p>
+    </div>
+  </section>
+  
+  <div class="tradingview-widget-container" style="width: 100%; height: 74px;">
+
+      <iframe scrolling="no" allowtransparency="true" frameborder="0" src="https://www.tradingview-widget.com/embed-widget/ticker-tape/?locale=en#%7B%22symbols%22%3A%5B%7B%22proName%22%3A%22BITSTAMP%3ABTCUSD%22%2C%22title%22%3A%22BTC%2FUSD%22%7D%2C%7B%22proName%22%3A%22BITSTAMP%3AETHUSD%22%2C%22title%22%3A%22ETH%2FUSD%22%7D%2C%7B%22description%22%3A%22USDT%2FUSD%22%2C%22proName%22%3A%22KRAKEN%3AUSDTUSD%22%7D%2C%7B%22description%22%3A%22XRP%2FUSD%22%2C%22proName%22%3A%22KRAKEN%3AXRPUSD%22%7D%2C%7B%22description%22%3A%22BCH%2FUSD%22%2C%22proName%22%3A%22KRAKEN%3ABCHUSD%22%7D%2C%7B%22description%22%3A%22BNB%2FUSD%22%2C%22proName%22%3A%22BINANCE%3ABNBUSD%22%7D%2C%7B%22description%22%3A%22DOT%2FUSD%22%2C%22proName%22%3A%22KRAKEN%3ADOTUSD%22%7D%2C%7B%22description%22%3A%22LINK%2FUSD%22%2C%22proName%22%3A%22KRAKEN%3ALINKUSD%22%7D%2C%7B%22description%22%3A%22BSV%2FUSD%22%2C%22proName%22%3A%22BITBAY%3ABSVUSD%22%7D%2C%7B%22description%22%3A%22CRO%2FUSD%22%2C%22proName%22%3A%22BITTREX%3ACROUSD%22%7D%2C%7B%22description%22%3A%22ADAUSD%22%2C%22proName%22%3A%22KRAKEN%3AADAUSD%22%7D%2C%7B%22description%22%3A%22LTC%2FUSD%22%2C%22proName%22%3A%22KRAKEN%3ALTCUSD%22%7D%2C%7B%22description%22%3A%22USDC%2FUSD%22%2C%22proName%22%3A%22KRAKEN%3AUSDCUSD%22%7D%2C%7B%22description%22%3A%22TRX%2FUSD%22%2C%22proName%22%3A%22KRAKEN%3ATRXUSD%22%7D%2C%7B%22description%22%3A%22XMR%2FUSD%22%2C%22proName%22%3A%22KRAKEN%3AXMRUSD%22%7D%5D%2C%22colorTheme%22%3A%22light%22%2C%22isTransparent%22%3Afalse%2C%22displayMode%22%3A%22compact%22%2C%22width%22%3A%22100%25%22%2C%22height%22%3A74%2C%22utm_source%22%3A%22mybridgetrustinvests.com%22%2C%22utm_medium%22%3A%22widget%22%2C%22utm_campaign%22%3A%22ticker-tape%22%2C%22page-uri%22%3A%22mybridgetrustinvests.com%2F%22%7D" title="ticker tape TradingView widget" lang="en" style="user-select: none; box-sizing: border-box; display: block; height: 74px; width: 100%;"></iframe>
+
+      
+
+    <style>
+.tradingview-widget-copyright {
+font-size: 13px !important;
+line-height: 32px !important;
+text-align: center !important;
+vertical-align: middle !important;
+/* @mixin sf-pro-display-font; */
+font-family: -apple-system, BlinkMacSystemFont, 'Trebuchet MS', Roboto, Ubuntu, sans-serif !important;
+color: #B2B5BE !important;
+}
+
+.tradingview-widget-copyright .blue-text {
+color: #2962FF !important;
+}
+
+.tradingview-widget-copyright a {
+text-decoration: none !important;
+color: #B2B5BE !important;
+}
+
+.tradingview-widget-copyright a:visited {
+color: #B2B5BE !important;
+}
+
+.tradingview-widget-copyright a:hover .blue-text {
+color: #1E53E5 !important;
+}
+
+.tradingview-widget-copyright a:active .blue-text {
+color: #1848CC !important;
+}
+
+.tradingview-widget-copyright a:visited .blue-text {
+color: #2962FF !important;
+}
+</style></div>
+  </div>
+  
+  <section class="investment-notes">
+    <h2>Investment Notes</h2>
+    <p>At Wealth Wise Investment, we prioritize transparency and accountability in all our investment operations. Our strategies focus on providing sustainable returns while ensuring the security of your capital.</p>
+    <ul>
+      <li>Our experts continuously monitor market conditions to adapt our strategies to current trends.</li>
+      <li>We provide monthly reports on your investment portfolio, ensuring full transparency.</li>
+      <li>We offer customized plans tailored to your financial goals.</li>
+    </ul>
+  </section>
+
+ 
+  <section class="plans">
+    <h2>Our Plans</h2>
+    <div class="plan">
+      <img src="basic-plan.jpg" alt="Basic Plan">
+      <h3>Basic Plan</h3>
+      <p>Investment: $1,000 - $10,000</p>
+      <p>Returns: 5% per annum</p>
+    </div>
+    <div class="plan">
+      <img src="premium-plan.jpg" alt="Premium Plan">
+      <h3>Premium Plan</h3>
+      <p>Investment: $10,000 - $100,000</p>
+      <p>Returns: 8% per annum</p>
+    </div>
+    <div class="plan">
+      <img src="elite-plan.avif" alt="Elite Plan">
+      <h3>Elite Plan</h3>
+      <p>Investment: $100,000+</p>
+      <p>Returns: 12% per annum</p>
+    </div>
+  </section>
+
+ 
+  <section class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h4>How safe is my investment?</h4>
+      <p>We employ stringent risk management strategies to ensure your capital is as safe as possible, with a focus on long-term, sustainable growth.</p>
+    </div>
+    <div class="faq-item">
+      <h4>What are the withdrawal options?</h4>
+      <p>Withdrawals can be made quarterly without any penalties. Full withdrawal options are available after a minimum holding period of 12 months.</p>
+    </div>
+    <div class="faq-item">
+      <h4>How can I get started?</h4>
+      <p>You can start by signing up and choosing a plan that aligns with your financial goals. Our support team is available to guide you through the process.</p>
+    </div>
+  </section>
+
+  <section class="stats">
+    <h2>Our Achievements</h2>
+    <div class="stats-container">
+      <div class="stat">
+        <h3>50,000+</h3>
+        <p>Happy Users</p>
+      </div>
+      <div class="stat">
+        <h3>$5 Million+</h3>
+        <p>Total Investments</p>
+      </div>
+      <div class="stat">
+        <h3>$20 Million+</h3>
+        <p>Withdrawals Processed</p>
+      </div>
+    </div>
+  </section>
+  
+
+ <!-- Popup Notification -->
+ <div id="popup-notification" class="popup alert alert-info fixed-bottom mb-3 mx-3 hidden" role="alert">
+  <p id="popup-message"></p>
+</div>
+  
+  <div class="container mt-3 bg-light" >
+    
+        <div class="row">
+        <!-- About us end-->
+
+        <div class="col-lg-12 footer-widget">
+            <h3 class="widget-title">RISK DISCLAIMER</h3>
+            <div class="newsletter-introtext">
+
+                Nothing contained in this website should be construed as a solicitation or offer, or recommendation, to
+                acquire or dispose of any investment or to engage in any other transaction. The information provided herein
+                is not intended for distribution to, or use by, any person or entity in any jurisdiction or country where
+                such distribution or use would be contrary to law or regulation. Some services may not be available to
+                certain investors due to regulatory or other constraints either in New Zealand, the United States or elsewhere.
+                It is advised that most services are only available following completion of the Customer Agreement and/or any
+                other relevant documentation as required. Investments in securities or financial instruments (including digital
+                currencies, futures, options, contracts for differences, spot and forward foreign exchange contracts) can fluctuate
+                in value. Accordingly, you should be aware that you might not realise the initial amount invested and indeed may
+                incur additional liabilities as investments in securities or financial instruments may entail above average risk.
+                You must therefore carefully consider whether your financial circumstances permit you to invest.
+                mybridgetrustinvests.com strongly suggests that you seek the advice of an independent financial advisor in this regard.
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="row">
+        <!-- About us end-->
+
+        <div class="col-lg-12 footer-widget">
+            <img src="tfc-icon.png" alt="">
+            <div class="newsletter-introtext"><br>
+                mybridgetrustinvests.com is a member of The Financial Commission, an international organization engaged in
+                the resolution of disputes within the financial services industry in the Forex market.
+            </div>
+
+        </div>
+        <div class="col-lg-12 footer-widget">
+            <img src="sec-logo.png" alt=""><br>
+            <div class="newsletter-introtext"><br>
+                mywealthwiseinvest.com is regulated by the US Securities and Exchange Commission. The mission of the SEC is to protect
+                investors; maintain fair,
+                orderly, and efficient markets; and facilitate capital formation.
+
+                mywealthwiseinvest.com is an investment company that . Direct access to over 50 financial markets
+                through one account. Any information contained on this website is provided to you for informational
+                purposes only and should not be regarded as an offer or solicitation of an offer to buy or sell any
+                investments or related services that may be referenced here. Investing in certain instruments,
+                including stocks, options, futures, foreign currencies, and bonds involve a high level of risk.
+                Trading on margin comes with substantial risk as well. You must be aware of these risks before
+                opening an account to trade. The income you may get from online investing may go down as well
+                as up.
+
+
+                mywealthwiseinvest.com is a registered investment dealer, a member of the
+                United States Securities and Exchange Commission (SEC), the Investment Industry Regulatory Organization of Canada
+                (IIROC) and a member of the Canadian Investor Protection Fund (CIPF), the benefits of which are limited to the
+                activities undertaken by mywealthwiseinvest.com.
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Content row end-->
+</div>
+<footer class="bg-dark text-white pt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 mb-4">
+        <h4 style=" color: #daa520;">About us</h4>
+        <p>We are a global investment firm committed to helping our clients grow their wealth with secure and sustainable investment strategies.</p>
+      </div>
+      <div class="col-md-3 mb-4">
+        <h4 style=" color: #daa520;">Support</h4>
+        <ul class="list-unstyled">
+          <li><a href="support.html" class="text-white text-decoration-none">Contact Us</a></li>
+          <li><a href="#" class="text-white text-decoration-none">FAQs</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Help Center</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3 mb-4">
+        <h4 style=" color: #daa520;">Policy</h4>
+        <ul class="list-unstyled">
+          <li><a href="policy.html" class="text-white text-decoration-none">Privacy Policy</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Terms of Service</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Refund Policy</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3 mb-4">
+        <h4 style=" color: #daa520;">Legal</h4>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white text-decoration-none">Disclaimers</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Risk Disclosure</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Legal Notices</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="text-center py-3 border-top">
+      <p>&copy; 2024 WealthwiseInvestment Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+  <!-- Bootstrap JS, Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+<script>
+  // Update chart every 60 seconds
+setInterval(updateChart, 60000);
+updateChart(); // Immediately call it once to initialize
+
+// Array of possible messages to display in the popup
+const messages = [
+  "Daniel has just withdrawn $300",
+  "Moses has just invested $500",
+  "Sarah has just withdrawn $150",
+  "Lola has just invested $200",
+  "Michael has just earned $100 from his investment",
+  "A client has just withdrawn $450",
+  "Mary has just invested $700",
+  "Keane has just invested $700",
+  "Michael has just earned $100 from his investment"
+];
+
+// Function to show the popup with a given message
+function showPopup(message) {
+  const popup = document.getElementById('popup-notification');
+  const popupMessage = document.getElementById('popup-message');
+
+  // Set the message content
+  popupMessage.textContent = message;
+
+  // Show the popup (remove 'hidden' class and add 'show' class)
+  popup.classList.remove('hidden');
+  popup.classList.add('show');
+
+  // Hide the popup after 5 seconds
+  setTimeout(() => {
+    popup.classList.remove('show');
+    popup.classList.add('hidden');
+  }, 5000); // 5 seconds
+}
+
+// Function to trigger a random popup message
+function triggerRandomPopup() {
+  const randomIndex = Math.floor(Math.random() * messages.length);
+  const randomMessage = messages[randomIndex];
+  showPopup(randomMessage);
+}
+
+// Trigger a random popup every 7 seconds
+setInterval(triggerRandomPopup, 7000);
+
+// Function to update the chart (dummy function, replace with actual chart update logic)
+function updateChart() {
+  console.log("Chart updated"); // Placeholder for your chart update logic
+}
+
+
+</script>
+</body>
+</html>
